@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-count-panel',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './count-panel.component.scss'
 })
 export class CountPanelComponent {
-
+  @Input() count = 0;
 }
