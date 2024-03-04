@@ -11,4 +11,8 @@ import { CountPanelComponent } from './count-panel/count-panel.component';
 })
 export class AppComponent {
   count = 0;
+
+  increment(): void {
+    this.count = 1;
+  }
 }
