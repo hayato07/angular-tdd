@@ -13,6 +13,6 @@ export class AppComponent {
   count = 0;
 
   increment(): void {
-    this.count = 1;
+    this.count++;
   }
 }
