@@ -25,5 +25,7 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     app.increment();
     expect(app.count).toEqual(1);
+    app.increment();
+    expect(app.count).toEqual(2);
   } );
 });
