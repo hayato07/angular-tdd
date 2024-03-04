@@ -19,4 +19,11 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app.count).toEqual(0);
   });
+
+  it('should increment the count.', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    app.increment();
+    expect(app.count).toEqual(1);
+  } );
 });
