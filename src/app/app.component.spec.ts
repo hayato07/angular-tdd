@@ -45,4 +45,16 @@ describe('AppComponent', () => {
     app.decrement();
     expect(app.count).toEqual(0);
   });
+
+  it('should not decrease the count less than 0.', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    [...Array(2).keys()].map(() => app.increment());
+    expect(app.count).toEqual(2);
+    app.decrement();
+    app.decrement();
+    expect(app.count).toEqual(0);
+    app.decrement();
+    expect(app.count).toEqual(0);
+  });
 });
