@@ -37,4 +37,10 @@ describe('AppComponent', () => {
     app.increment();
     expect(app.count).toEqual(5);
   });
+
+  it('should decrement the count.', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    app.decrement();
+  });
 });
