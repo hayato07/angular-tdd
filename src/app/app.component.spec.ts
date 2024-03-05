@@ -27,5 +27,14 @@ describe('AppComponent', () => {
     expect(app.count).toEqual(1);
     app.increment();
     expect(app.count).toEqual(2);
-  } );
+  });
+
+  it('should not increase the count more than 5.', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    [...Array(5).keys()].map(() => app.increment());
+    expect(app.count).toEqual(5);
+    app.increment();
+    expect(app.count).toEqual(5);
+  });
 });
