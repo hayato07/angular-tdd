@@ -1,4 +1,4 @@
 <div class="app">
   <app-count-panel [count]="count"></app-count-panel>
-  <app-count-button (addClickEvent)="increment()"></app-count-button>
+  <app-count-button (addClickEvent)="increment()" (subtractClickEvent)="decrement()"></app-count-button>
 </div>

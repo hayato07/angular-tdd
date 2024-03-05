@@ -9,8 +9,13 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class CountButtonComponent {
   @Output() addClickEvent = new EventEmitter<void>();
+  @Output() subtractClickEvent = new EventEmitter<void>();
 
   emitAddClickEvent(): void {
     this.addClickEvent.emit();
+  }
+
+  emitSubtractClickEvent(): void {
+    this.subtractClickEvent.emit();
   }
 }
