@@ -22,4 +22,8 @@ export class AppComponent {
 
     this.count++;
   }
+
+  decrement(): void {
+    this.count--;
+  }
 }
