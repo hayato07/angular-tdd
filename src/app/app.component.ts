@@ -4,6 +4,7 @@ import { CountPanelComponent } from './count-panel/count-panel.component';
 import { CountButtonComponent } from './count-button/count-button.component';
 
 const COUNT_MAX = 5;
+const COUNT_MIN = 0;
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,10 @@ export class AppComponent {
   }
 
   decrement(): void {
+    if(this.count <= COUNT_MIN) {
+      return;
+    }
+
     this.count--;
   }
 }
